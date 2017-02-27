@@ -17505,3 +17505,307 @@ Processing by Api::V1::UsersController#show as */*
 Completed 200 OK in 1ms (Views: 0.0ms | ActiveRecord: 0.1ms)
 
 
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/api/v1/users/1" for ::1 at 2017-02-27 10:35:48 +0200
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2017-02-27 10:35:52 +0200
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2017-02-27 10:35:55 +0200
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2017-02-27 10:37:54 +0200
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/v1/users/2" for ::1 at 2017-02-27 10:37:57 +0200
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2017-02-27 10:38:03 +0200
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for Api::V1::UsersController):
+  
+actionpack (5.0.1) lib/abstract_controller/base.rb:121:in `process'
+actionpack (5.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.1.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.1.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.1ms)
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (80.0ms)
+Started GET "/api/v1/users/1" for ::1 at 2017-02-27 10:39:50 +0200
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 204 No Content in 16ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2017-02-27 10:40:12 +0200
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2017-02-27 10:40:12 +0200
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2017-02-27 10:43:17 +0200
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 56ms (Views: 21.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2017-02-27 10:43:40 +0200
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered Api::V1::UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.0ms)
+Completed 200 OK in 62ms (Views: 46.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2017-02-27 10:43:55 +0200
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered Api::V1::UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.96ms)
+Completed 200 OK in 19ms (Views: 1.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users/5" for ::1 at 2017-02-27 10:45:40 +0200
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered Api::V1::UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.39ms)
+Completed 200 OK in 82ms (Views: 23.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2017-02-27 10:45:44 +0200
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered Api::V1::UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.08ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2017-02-27 10:48:31 +0200
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mMicropost Load (65.8ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? ORDER BY "microposts"."created_at" DESC[0m  [["user_id", 1]]
+[active_model_serializers] Rendered Api::V1::UserSerializer with ActiveModelSerializers::Adapter::Attributes (205.66ms)
+Completed 200 OK in 238ms (Views: 140.0ms | ActiveRecord: 67.0ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2017-02-27 10:48:59 +0200
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+[active_model_serializers] Rendered Api::V1::UserSerializer with ActiveModelSerializers::Adapter::Attributes (107.94ms)
+Completed 200 OK in 132ms (Views: 107.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2017-02-27 10:49:30 +0200
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered Api::V1::UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.5ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `followings' for #<User:0x007fd6af4a20f8>
+Did you mean?  following
+               following?
+               following=
+               following_ids
+               following_ids=
+               follow
+               followers):
+  
+app/controllers/api/v1/users_controller.rb:6:in `show'
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.3ms)
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.3ms)
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (79.5ms)
+Started GET "/api/v1/users/1" for ::1 at 2017-02-27 10:49:40 +0200
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered Api::V1::UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.28ms)
+Completed 200 OK in 18ms (Views: 1.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2017-02-27 10:54:20 +0200
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mMicropost Load (2.1ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? ORDER BY "microposts"."created_at" DESC[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+[active_model_serializers] Rendered Api::V1::UserSerializer with ActiveModelSerializers::Adapter::Attributes (72.22ms)
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 4.4ms)
+
+
+  
+NoMethodError (undefined method `followings' for #<User:0x007fd6abf95f40>
+Did you mean?  following
+               following?
+               following=
+               following_ids
+               following_ids=
+               follow
+               followers):
+  
+app/controllers/api/v1/users_controller.rb:6:in `show'
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.2ms)
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.5ms)
+  Rendering /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/kalilo/.rvm/gems/ruby-2.4.0-rc1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (77.7ms)
+Started GET "/api/v1/users/1" for ::1 at 2017-02-27 10:54:33 +0200
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mMicropost Load (9.4ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? ORDER BY "microposts"."created_at" DESC[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+[active_model_serializers] Rendered Api::V1::UserSerializer with ActiveModelSerializers::Adapter::Attributes (63.43ms)
+Completed 200 OK in 122ms (Views: 52.7ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2017-02-27 10:55:10 +0200
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mMicropost Load (1.9ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? ORDER BY "microposts"."created_at" DESC[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+[active_model_serializers] Rendered Api::V1::UserSerializer with ActiveModelSerializers::Adapter::Attributes (71.03ms)
+Completed 200 OK in 106ms (Views: 67.9ms | ActiveRecord: 4.2ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/api/v1/users/1" for ::1 at 2017-02-27 10:57:51 +0200
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered Api::V1::UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.97ms)
+Completed 200 OK in 18ms (Views: 1.3ms | ActiveRecord: 1.3ms)
+
+

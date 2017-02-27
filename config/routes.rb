@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # App
   get 'password_resets/new'
 
   get 'password_resets/edit'
@@ -26,5 +27,20 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :microposts,          only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  # API
+  namespace :api do
+    namespace :v1 do
+      resources :sessions, only: [:create, :show]
+      resources :users, only: [:index, :create, :show, :update, :destroy] do
+        post :activate, on: :collection
+        resources :followers, only: [:index, :destroy]
+        resources :followings, only: [:index, :destroy] do
+          post :create, on: :member
+        end
+        resource :feed, only: [:show]
+      end
+      resources :microposts, only: [:index, :create, :show, :update, :destroy]
+    end
+  end
 end
